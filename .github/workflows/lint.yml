@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   repo-lint:
-    name: "repolint: vanilla"
+    name: "repolint"
     runs-on: ubuntu-latest
     steps:
       - name: "checkout repo"
@@ -12,3 +12,5 @@ jobs:
           fetch-depth: 0
       - name: Test repolinter
         uses: philips-labs/github-action-repolinter@master
+        env:
+          CUSTOM_REPOLINT_FILE:  ./repolint.json
