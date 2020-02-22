@@ -11,4 +11,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Test repolinter
-        uses: philips-labs/github-action-repolinter
+        uses: philips-labs/github-action-repolinter@0a9fa4e70f5bd38d9f1842df40b5fbedf62f1f27
