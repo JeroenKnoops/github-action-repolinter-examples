@@ -23,9 +23,9 @@ jobs:
       - name: Test repolinter
         uses: philips-labs/github-action-repolinter@master
         env:
-          CUSTOM_REPOLINT_FILE:  repolint.json
+          CUSTOM_REPOLINT_FILE: repolint.json
   repo-lint-git:
-    name: "repolint git custom"
+    name: "repolint git"
     runs-on: ubuntu-latest
     steps:
       - name: Test repolinter
@@ -45,4 +45,4 @@ jobs:
         with:
           args: --git https://github.com/philips-labs/garo
         env:
-          CUSTOM_REPOLINT_FILE:  repolint.json
+          CUSTOM_REPOLINT_FILE: repolint.json
