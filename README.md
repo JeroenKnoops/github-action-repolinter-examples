@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project test the [GitHub Action Repolinter](https://github.com/philips-labs/github-action-repolinter)
+This project test the [GitHub Action Repolinter](https://github.com/philips-labs/github-action-repolinter).
 
 ## Usage
 
