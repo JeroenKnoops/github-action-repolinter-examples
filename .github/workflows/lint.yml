@@ -25,7 +25,15 @@ jobs:
         env:
           CUSTOM_REPOLINT_FILE:  repolint.json
   repo-lint-git:
-    name: "repolint git"
+    name: "repolint git custom"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test repolinter
+        uses: philips-labs/github-action-repolinter@master
+        with:
+          args: --git https://github.com/philips-labs/garo
+  repo-lint-git-custom:
+    name: "repolint git custom"
     runs-on: ubuntu-latest
     steps:
       - name: "checkout repo"
