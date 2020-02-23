@@ -11,6 +11,30 @@ jobs:
         with:
           fetch-depth: 0
       - name: Test repolinter
-        uses: philips-labs/github-action-repolinter@98359d1aa1f30c4348a8f4a22f34d6155a6d9e4a
+        uses: philips-labs/github-action-repolinter@master
+  repo-lint-custom:
+    name: "repolint custom"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout repo"
+        uses: actions/checkout@v2.0.0
+        with:
+          fetch-depth: 0
+      - name: Test repolinter
+        uses: philips-labs/github-action-repolinter@master
+        env:
+          CUSTOM_REPOLINT_FILE:  repolint.json
+  repo-lint-git:
+    name: "repolint git"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout repo"
+        uses: actions/checkout@v2.0.0
+        with:
+          fetch-depth: 0
+      - name: Test repolinter
+        uses: philips-labs/github-action-repolinter@master
+        with:
+          args: --git https://github.com/philips-labs/garo
         env:
           CUSTOM_REPOLINT_FILE:  repolint.json
