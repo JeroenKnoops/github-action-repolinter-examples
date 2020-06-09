@@ -1,7 +1,7 @@
 name: Lint repository
 on:
   issues:
-    types: [edited]
+    types: [edited, labeled]
   push:
 
 jobs:
