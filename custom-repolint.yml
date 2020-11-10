@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "all": {
+      "binaries-not-present:file-type-exclusion": ["error", {"type": ["**/*.exe", "**/*.dll", "!node_modules/**"]}]
+    }
+  }
+}
